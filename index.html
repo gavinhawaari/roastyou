@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roastyou - Ubah Foto Pribadi-mu Jadi Bahan Roasting yang Menghibur!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     
+     <style>
+     #loadingPage {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 70vh;
+     }
+     .progress {
+     width: 80%;
+     }
+     </style>
+
+
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-hitam pe-2 py-3 fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <img src="images/logo.png" alt="Logo" class="d-inline-block align-top navbar-logo" style="margin-left: -5px;">
+    </a>
+    <button class="navbar-toggler text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <img src="images/menu.png" width="25"/>
+    </button>
+    <div class="offcanvas offcanvas-end pe-4 py-2 bg-hitam" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+    <img src="images/logo.png" alt="Logo" class="d-inline-block align-top navbar-logo" style="margin-left: -8px;">
+    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
+     <img src="images/close.png" width="17" style="margin-top: -15px;"/>
+    
+    </button>
+    </div>
+    <div class="offcanvas-body mx-3 mt-3 f500">
+    <a href="#!">Home</a>
+    <a href="#fitur">Fitur</a>
+    <a href="https://saweria.co/zakikaidzan">Dukungan</a>
+    <a href="tentang">Tentang</a>
+    </div>
+    <div class="offcanvas-footer p-5">
+    <div class="social-icons" style="margin-left: -10px;">
+    <a href="https://instagram.com/akhirpetang" target="_blank" class="fab fa-instagram"></a>
+    <a href="https://twitter.com/akhirpetang" target="_blank" class="fab fa-twitter"></a>
+    <a href="https://dribbble.com/zakiakaidzan" target="_blank" class="fab fa-dribbble"></a>
+    </div>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#fitur">Fitur</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="https://saweria.co/zakikaidzan">Dukungan</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="tentang">Tentang</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    
+    
+    <div class="container mt-5">
+        <h1 class="mx-3 f500 lh-2" style="margin-top: 120px; font-size: 33px;">Ubah Foto Biasa Jadi Bahan Roasting yang Menghibur!</h1>
+
+
+        <form id="form" class="mt-5 mx-3">
+            <div class="card card-custom mb-3">
+                <img src="images/upload.png" alt="Image Icon" style="opacity: 0.3;">
+                <label class="btn-file mb-2 f400">
+                    <span id="chooseText">Pilih foto kamu</span>
+                    <input type="file" id="photo" accept="image/*" required>
+                </label>
+                <small id="fileNameDisplay" class="form-text text-muted d-block mt-2 d-none"></small>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="button" class="btn btn-custom-disabled w-100 py-3 rounded-4 f400">
+                    Mulai roasting
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <section class="mt-5 mx-3">
+    
+    <div class="container">
+    
+    <img class="img-fluid mb-3 rounded-4" alt="Image Preview" src="images/hero.webp">
+
+    </div>
+    </section>
+    
+    <section class="mb-5" id="fitur" style="margin-top: 30px;">
+    
+    <div class="container">
+    <div class="mt-5 mb-5 mx-3 text-center">
+    <p class="mb-2 f600 lh" style="font-size: 0.8rem; color: #FF3A5D;">ROASTING FOTO SIAPAPUN DI ROASTYOU</p>
+    <h1 class="mb-3 f500 lh-2">Ingin membuat teman tertawa atau hanya ingin menguji selera humormu sendiri</h1>
+    <p class="f400 lh">Roasting foto pribadimu atau temanmu, dan lihat bagaimana kami mengubahnya menjadi lelucon yang memukau!</p>
+    </div>
+    <div class="row mx-2">
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bg-card">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="https://cdn-icons-png.flaticon.com/512/10473/10473357.png">
+    </div>
+    <h4 class="card-title f500">Upload & Roast</h4>
+    <p class="card-text f400 lh op mt-3">Ambil foto terbaik atau terburuk Anda dan biarkan AI kami memberikan komentar tajam yang pasti akan membuat Anda tertawa. Siapapun bisa di-roast, termasuk Anda!</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bg-card">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="https://cdn-icons-png.flaticon.com/512/10473/10473528.png">
+    </div>
+    <h4 class="card-title f500">Keamanan Terjamin</h4>
+    <p class="card-text f400 lh op mt-3">Jangan khawatir, kami menjaga keamanan Anda. Foto yang Anda unggah hanya digunakan untuk roasting dan langsung terhapus otomatis setelah sesi roasting selesai. Data pribadi Anda tidak pernah disimpan.</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bg-card">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="https://cdn-icons-png.flaticon.com/512/10473/10473571.png">
+    </div>
+    <h4 class="card-title f500 lh-2">Roasting Spesifik untuk Setiap Target</h4>
+    <p class="card-text f400 lh op mt-3">Roasting kami dirancang untuk setiap target yang berbeda. Apakah Anda ingin roasting yang lucu untuk diri sendiri, atau komentar yang lebih tajam untuk teman? AI kami memberikan hasil yang pas sesuai dengan target yang Anda pilih.</p>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bg-card">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="https://cdn-icons-png.flaticon.com/512/10473/10473393.png">
+    </div>
+    <h4 class="card-title f500">Gratis 100%</h4>
+    <p class="card-text f400 lh op mt-3">Nikmati fitur ini sepenuhnya tanpa biaya. Kami percaya bahwa humor adalah hak setiap orang, dan kami ingin memastikan bahwa kamu bisa berbagi tawa tanpa harus mengeluarkan uang.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    </section>
+    
+    <div class="container">
+    <footer class="py-3 my-4 text-center">
+    <img src="images/logo.png" alt="Logo" class="navbar-logo mb-3">
+    <ul class="nav justify-content-center border-btm pb-3 mb-3">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-white f400">Rumah</a></li>
+    <li class="nav-item"><a href="#fitur" class="nav-link px-2 text-white f400">Fitur</a></li>
+    <li class="nav-item"><a href="https://saweria.com/zakikaidzan" class="nav-link px-2 text-white f400">Dukungan</a></li>
+    <li class="nav-item"><a href="tentang" class="nav-link px-2 text-white f400">Tentang</a></li>
+    </ul>
+    <p class="text-center text-body-secondary f400">&copy; 2024 Roastyou</p>
+    </footer>
+    </div>
+    
+    
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-content-fullscreen rounded-4 bg-hitam-2">
+    <div class="modal-header pt-4 pb-3 border-btm-2" style="padding-right: 25px;">
+    <h5 class="modal-title f400 " id="resultModalLabel"></h5>
+    <button type="button" class="btn-close1" data-bs-dismiss="modal" aria-label="Close">
+    <img src="images/close.png" width="12" style="margin-top: -7px;"/>
+    
+    </button>
+    </div>
+    
+    
+    <div class="modal-body">
+    <div id="loadingPage">
+    <p id="loadingText" class="mb-3 mx-3 text-center"style="font-size: 23px;">Tunggu sebentar...</p>
+
+    <div class="progress">
+    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    </div>
+
+     <img id="modalPreview" class="img-fluid mb-3 rounded-4 img-roasting mb-3" alt="Image Preview" style="display: none;">
+     <div class="border-roast rounded-4 f400" id="modalBorder" style="display: none;">
+     <div id="modalRoast" class="p-3 f400 lh" style="display: none;"></div>
+     </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+    const form = document.getElementById("form");
+    const photo = document.getElementById("photo");
+    const fileNameDisplay = document.getElementById("fileNameDisplay");
+    const chooseText = document.getElementById("chooseText");
+    const modalPreview = document.getElementById("modalPreview");
+    const modalRoast = document.getElementById("modalRoast");
+    const modalBorder = document.getElementById("modalBorder");
+    const button = document.getElementById("button");
+    const loadingPage = document.getElementById("loadingPage");
+    const loadingText = document.getElementById("loadingText");
+    
+    function updateButtonState() {
+    if (photo.files.length === 0) {
+    button.classList.remove("btn-custom-active");
+    button.classList.add("btn-custom-disabled");
+    button.disabled = true;
+    } else {
+    button.classList.remove("btn-custom-disabled");
+    button.classList.add("btn-custom-active");
+    button.disabled = false;
+    }
+    }
+    
+    photo.onchange = (evt) => {
+    const [file] = photo.files;
+    if (file) {
+    chooseText.textContent = file.name;
+    fileNameDisplay.textContent = file.name;
+    button.innerHTML = "Mulai roasting sekarang";
+    } else {
+    chooseText.textContent = "Pilih foto kamu";
+    fileNameDisplay.textContent = "";
+    }
+    updateButtonState();
+    };
+    
+    function displayLoadingTexts() {
+    loadingText.textContent = "Lagi nyiapin roasting buat foto lu 🤔";
+    setTimeout(() => {
+    loadingText.textContent = "Bentar banyak banget nih kata-kata nya 😫😩";
+    setTimeout(() => {
+    loadingText.textContent = "Gue lagi ngerapihin kata-katanya dulu ya, santai dulu gak sih.";
+    setTimeout(() => {
+    loadingText.textContent = "Udah beres nih kata-kata roasting buat foto luh 🔥";
+    }, 3000); // Tampilkan teks akhir selama 3 detik
+    }, 2000); // Tampilkan teks "Lagi ngerangkai kata dulu..." selama 2 detik
+    }, 1000); // Tampilkan teks "Tunggu sebentar..." selama 1 detik
+    }
+    
+    function displayFinalResults(data) {
+    // Jeda 3 detik sebelum menampilkan data
+    setTimeout(() => {
+    loadingPage.style.display = "none";
+    button.disabled = false;
+    button.innerHTML = "Mulai roasting";
+    
+    if (data.ok) {
+    modalPreview.src = URL.createObjectURL(photo.files[0]);
+    modalPreview.style.display = "block";
+    const processedText = data.text.replace(/==(.+?)==/g, '<mark>$1</mark>');
+    modalRoast.innerHTML = marked.parse(processedText);
+    modalRoast.style.display = "block";
+    modalBorder.style.display = "block";
+    
+    } else if (data.statusCode == 429) {
+    
+    modalPreview.src = URL.createObjectURL(photo.files[0]);
+    modalPreview.style.display = "block";
+    modalRoast.innerHTML = `Sorry pengunjung diwebsite lagi naik lagi rame banget ini, sabar sebentar ya 😭😭<br><small>${data.message}</small>`;
+    modalRoast.style.display = "block";
+    modalBorder.style.display = "block";
+    
+    } else {
+    
+    modalPreview.src = URL.createObjectURL(photo.files[0]);
+    modalPreview.style.display = "block";
+    modalRoast.innerHTML = "Roastingan untuk foto kamu ini terlalu brutal Bro/Sist sampe-sampe bot gue nya gak mau roasting 🔥🔥💀💀🤣🤣🤣<br> Silahkan pake foto yang lain atau coba lagi.";
+    modalRoast.style.display = "block";
+    modalBorder.style.display = "block";
+    }
+    
+    form.reset();
+    chooseText.textContent = "Pilih foto kamu";
+    
+    }, 3000); // Jeda 3 detik sebelum menampilkan hasil akhir
+    }
+    
+    form.onsubmit = (e) => {
+    e.preventDefault();
+    
+    // Tampilkan modal dengan loading
+    const modal = new bootstrap.Modal(document.getElementById('resultModal'));
+    modal.show();
+    
+    // Reset tampilan modal untuk roasting
+    modalRoast.style.display = "none";
+    modalBorder.style.display = "none";
+    modalPreview.style.display = "none";
+    loadingPage.style.display = "flex";
+    
+    // Mulai menampilkan teks loading
+    displayLoadingTexts();
+    
+    button.disabled = false;
+    button.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Tunggu sebentar ya..`;
+    
+    const data = new FormData();
+    data.append("file", photo.files[0]);
+    
+    fetch("https://kritikfotomu.vercel.app/roast", {
+    method: "POST",
+    body: data,
+    })
+    .then((response) => response.json())
+    .then((data) => {
+    // Tampilkan hasil akhir setelah teks loading
+    displayFinalResults(data);
+    })
+    .catch((error) => {
+    console.error("Error:", error);
+    // Hentikan teks loading
+    loadingText.textContent = "Terjadi kesalahan. Silakan coba lagi.";
+    loadingPage.style.display = "none";
+    button.disabled = false;
+    button.innerHTML = "Mulai roasting";
+    modalRoast.style.display = "block";
+    modalBorder.style.display = "block";
+    });
+    };
+    </script>
+</body>
+</html>
